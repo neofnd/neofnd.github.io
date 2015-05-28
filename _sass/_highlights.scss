@@ -8,10 +8,12 @@
   box-shadow: 3px 3px rgba(0,0,0,0.1);
   margin: 20px 0 20px 0;
   overflow:auto;
+
+  pre {
+	line-height:14px;
+  }
 }
-.highlight pre {
-	line-height:!4px;
-}
+
 code {
 	font-family:'Consolas','나눔고딕', NanumGothic;font-size:12px;
 }
