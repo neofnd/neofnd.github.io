@@ -17,7 +17,6 @@ avatar: https://avatars1.githubusercontent.com/u/12045172?v=3&s=460
 
 # Includes an icon in the footer for each username you enter
 footer-links:
-  dribbble:
   email: lsk9143@naver.com
   facebook:
   flickr:
@@ -50,10 +49,10 @@ baseurl: ""
 #
 # !! You don't need to change any of the configuration flags below !!
 #
-
+timezone: Asia/South Korea
 markdown: redcarpet
 highlighter: pygments
-permalink: /:title/
+permalink: /post/:title
 
 # The release of Jekyll Now that you're using
 version: v1.1.0
@@ -73,3 +72,4 @@ exclude:
     - LICENSE
     - README.md
 paginate: 10
+paginate_path: '/blog/:num'
