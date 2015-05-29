@@ -19,29 +19,29 @@ layout: default
 	<ul class="pagination clearfix">
 	{% if paginator.previous_page %}
 		{% if paginator.previous_page == 1 %}
-		<li><a href="/">Prev</a></li>
+		<li><a href="/" class="pageingFrist">이전</a></li>
 		{% else %}
-		<li><a href="/page{{ paginator.previous_page }}">Prev</a></li>
+		<li><a href="/page{{ paginator.previous_page }}" class="pageingFrist">Prev</a></li>
 		{% endif %}
 	{% else %}
-		<li><span class="disabled">이전</span></li>
+		<li><span class="disabled pageingFrist">이전</span></li>
 	{% endif %}
 	{% if paginator.page == 1 %}
-		<li><span class="active">1</span></li>
+		<li><span class="active pagingNum">1</span></li>
 	{% else %}
-		<li><a href="/">1</a></li>
+		<li><a href="/" class="pagingNum">1</a></li>
 	{% endif %}
 		{% for count in (2..paginator.total_pages) %}
 			{% if count == paginator.page %}
-			<li><span class="active">{{ count }}</span></li>
+			<li><span class="active pagingNum">{{ count }}</span></li>
 			{% else %}
-			<li><a href="/page{{ count }}">{{ count }}</a></li>
+			<li><a href="/page{{ count }}" class="pagingNum">{{ count }}</a></li>
 			{% endif %}
 		{% endfor %}
 	{% if paginator.next_page %}
-		<li><a href="/page{{ paginator.next_page }}">Next</a></li>
+		<li><a href="/page{{ paginator.next_page }}" class="pageingLast">다음</a></li>
 		{% else %}
-		<li><span class="disabled">다음</span></li>
+		<li><span class="disabled pageingLast">다음</span></li>
 		{% endif %}
 	</ul>
 </div>
