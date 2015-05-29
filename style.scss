@@ -15,11 +15,6 @@
 /* BASE RULES */
 /**************/
 
-@-webkit-keyframes fadein { 0% { -webkit-transform: translateY(40px); opacity: 0; }
-  100% { -webkit-transform: translateY(0px); opacity: 1; } }
-@keyframes fadein { 0% { transform: translateY(40px); opacity: 0; }
-  100% { transform: translateY(0px); opacity: 1; } }
-
 html {
 	font-size: 100%;
 }
@@ -53,12 +48,6 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
 	font-size:30px;
 	letter-spacing:-1px;
-	margin:0;
-	-webkit-transform-origin:bottom center;
-	transform-origin:bottom center;
-	-webkit-animation:fadein 1.1s 1;
-	animation:fadein 1.1s 1;
-	transform:translate3d(0, 0, 0);
 	a {
 		color: inherit;
 	}
@@ -256,7 +245,41 @@ nav {
 //
 // .main
 //
+//
+@-webkit-keyframes fadein {
 
+	0% {
+		-webkit-transform: translateY(40px);
+		opacity:0;
+	}
+
+	100% {
+		-webkit-transform:translateY(0px);
+		opacity:1;
+	}
+}
+
+@keyframes fadein {
+
+	0% {
+		transform:translateY(40px);
+		opacity:0;
+	}
+
+	100% {
+		transform:translateY(0px);
+		opacity:1;
+	}
+
+}
+
+.post > h1 {
+	-webkit-transform-origin:bottom center;
+	transform-origin:bottom center;
+	-webkit-animation:fadein 1.1s 1;
+	animation:fadein 1.1s 1;
+	transform:translate3d(0, 0, 0);
+}
 .posts > .post {
 	padding-bottom:2em;
 	border-bottom:1px solid $lightGray;
