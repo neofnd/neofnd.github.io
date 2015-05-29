@@ -276,6 +276,22 @@ nav {
 	}
 }
 
+/**
+ * 페이징
+ */
+
+.pagingCenterBox {
+	text-align:center;
+	.pagination {
+		display:inline-block;
+		list-style:none;
+		li {
+			list-style:none;
+			float:left;
+		}
+	}
+}
+
 .wrapper-footer {
 	margin-top:50px;
 	border-top:1px solid #ddd;
