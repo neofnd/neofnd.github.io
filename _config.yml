@@ -73,3 +73,6 @@ exclude:
     - LICENSE
     - README.md
 paginate: 10
+paginate_path: "/blog/page:num/"
+timezone: Asia/Seoul
+categories: [html, css, js, etc]
